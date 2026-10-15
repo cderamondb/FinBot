@@ -1,8 +1,11 @@
+import os
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from agent import FinancialAgent
+
+PORT = int(os.getenv("PORT", 8000))
 
 app = FastAPI(title="Agente Financiero IA")
 
